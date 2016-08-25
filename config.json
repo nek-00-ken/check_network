@@ -1,0 +1,39 @@
+{
+    "groups" : [
+        {
+            "label" : "local",
+            "hosts" : ["localhost"]
+        }
+    ],
+    "hosts" : [
+        {
+            "label": "My Local Host",
+            "hostname": "localhost",
+            "ip_address": "127.0.0.1",
+            "login": "user",
+            "ssh_key" : "/Users/test/.ssh/localhost_rsa",
+            "services" : [
+                {
+                    "description": "MongoDB",
+                    "dest_ip" : null,
+                    "dest_hostname": "localhost",
+                    "dest_port": 27017
+                },
+                {
+                    "description": "MongoDB",
+                    "dest_ip" : "127.0.0.1",
+                    "dest_hostname": null,
+                    "dest_port": 27017
+                }
+            ],
+            "flux": [
+                {
+                    "description": "Test",
+                    "dest_ip" : null,
+                    "dest_hostname": "www.google.fr",
+                    "dest_port": 80
+                }
+            ]
+        }
+    ]
+}
